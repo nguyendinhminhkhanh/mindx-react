@@ -17,8 +17,8 @@ class ColorPicker extends Component {
   };
 
   render() {
-    const { colors } = this.props;
-    const { activeColor } = this.state;
+    const { colors, activeColor, handleActiveColor } = this.props;
+
     return (
       <div className="ColoPicker">
         {colors.map((color) => {
@@ -30,7 +30,7 @@ class ColorPicker extends Component {
               key={color}
               className={cls}
               style={style}
-              onClick={()=>this.handleActiveColor(color)}
+              onClick={() => handleActiveColor(color)}
             ></span>
           );
         })}
